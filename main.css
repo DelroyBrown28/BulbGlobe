@@ -25,14 +25,11 @@ body {
 .sphere path {
   fill: url(#sphereGradient);
   stroke-width: 1px;
-  stroke: rgba(80, 80, 80, .35);
+  stroke: rgba(80, 80, 80, 0.35);
   backface-visibility: hidden;
- 
 }
 
-
-
-@media (min-width: 500px) {
+@media (min-wdith: 500px) {
   .sphere path {
     stroke-width: .4px;
   }
