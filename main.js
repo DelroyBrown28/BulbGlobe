@@ -29,9 +29,9 @@ function fitElementToParent(el, padding) {
         for (var i = 0; i < pathLength; i++) {
           aimations.push(anime({
             targets: spherePathEls[i],
-            stroke: {value: ['rgba(255,75,75,1)', 'rgba(80,80,80,.35)'], duration: 500},
-            translateX: [2, -4],
-            translateY: [2, -4],
+            stroke: {value: ['#BEFBFF', '#008297'], duration: 500},
+            translateX: [5, -4],
+            translateY: [5, -4],
             easing: 'easeOutQuad',
             autoplay: false
           }));
@@ -39,7 +39,7 @@ function fitElementToParent(el, padding) {
       },
       update: function(ins) {
         aimations.forEach(function(animation, i) {
-          var percent = (1 - Math.sin((i * .35) + (.0022 * ins.currentTime))) / 2;
+          var percent = (1 - Math.sin((i * .5) + (.0035 * ins.currentTime))) / 2;
           animation.seek(animation.duration * percent);
         });
       },
